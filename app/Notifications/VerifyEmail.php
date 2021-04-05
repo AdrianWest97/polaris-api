@@ -16,6 +16,6 @@ class VerifyEmail extends \Illuminate\Auth\Notifications\VerifyEmail
     {
         $hash = Crypt::encrypt($notifiable->getKey());
         //TODO: congigure
-        return env('APP_URL','http://localhost').'/verify/' . $hash;
+        return env('MIX_VUE_APP_URL','http://localhost:8080').'/verify/' . $hash;
     }
 }

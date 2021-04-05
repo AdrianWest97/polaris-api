@@ -44,7 +44,7 @@ class PasswordResetNotification extends Notification
     public function toMail($notifiable)
     {
         //TODO: update app url
-        $urlToResetForm = env("MIX_API_ENDPOINT","http://localhost/")."reset-password/".$this->token;
+        $urlToResetForm = env("MIX_VUE_APP_URL","http://localhost:8080")."/reset-password/".$this->token;
         return (new MailMessage)
             ->subject(Lang::get('Password Reset'))
             ->line(Lang::get('You requested here you go!'))

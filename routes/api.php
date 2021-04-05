@@ -103,3 +103,4 @@ Route::get('/pick_up_locations',function(){
  });
  Route::get('/products/',[ProductController::class,'all']);
 Route::get('/products/{id}',[ProductController::class,'get']);
+Route::get('/packages/',[PackageController::class,'all']);
